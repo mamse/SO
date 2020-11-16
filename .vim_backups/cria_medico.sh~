@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#nome=$1
+#n de cedula profissional=$2
+#especialidade medica=$3
+#e-mail=$4
+
+rating=0
+nconsultas=0
+saldo=0
+
+teste=$(cat medicos.txt| cut -d ';' -f2|grep $2)
+echo "é um  $teste"
+
+if [ "$teste == "" ]
+  then
+	echo "$1;$2;$3;$4;$rating;$nconsultas;$saldo" >> medicos.txt
+else
+	echo "já existe!"
+fi
+
+cat medicos.txt

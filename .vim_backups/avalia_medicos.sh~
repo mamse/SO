@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cat medicos.txt|awk -F ";" '{print $5}'
+
+cat medicos.txt|awk -F ";" '$6<5 && $7>6  {print $0 >"lista_negra_medicos.txt"}'
+ 
+
+cat lista_negra_medicos.txt

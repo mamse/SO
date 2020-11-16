@@ -1,0 +1,5 @@
+#!/bin/bash
+
+n=$RANDOM
+echo n
+
